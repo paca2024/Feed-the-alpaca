@@ -1,0 +1,16 @@
+Welcome to Feed the Alpaca! 🦙
+
+To start playing, just tap the "Play" button below or use the /play command. Try to get the highest score by feeding the alpaca with hay!
+
+Commands:
+/play - Start the game
+/scores - View global leaderboard
+/help - Show this help message
+
+Game Rules:
+- Feed the alpaca to keep it happy and healthy
+- You have 60 seconds to get the highest score
+- The game has a 1-hour cooldown between attempts
+- Compete with other players for the top spot!
+
+Good luck! 🌟

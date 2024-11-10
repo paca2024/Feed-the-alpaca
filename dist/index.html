@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Feed the Alpaca</title>
+    <meta property="og:title" content="Feed the Alpaca Game" />
+    <meta property="og:description" content="Feed the alpaca and compete for high scores!" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <meta name="telegram:channel" content="@FeedTheAlpaca" />
+    <meta name="telegram:bot" content="@FeedTheAlpacaBot" />
+    <meta name="telegram:game" content="FeedTheAlpaca" />
+    <script>
+      window.gameScriptLoaded = false;
+      
+      function handleTelegramWebViewExpand() {
+        if (window.Telegram && window.Telegram.WebApp) {
+          window.Telegram.WebApp.expand();
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.Telegram && window.Telegram.WebApp) {
+          document.getElementById('root').style.display = 'block';
+          document.getElementById('redirect').style.display = 'none';
+          handleTelegramWebViewExpand();
+        } else {
+          document.getElementById('root').style.display = 'none';
+          document.getElementById('redirect').style.display = 'flex';
+        }
+      });
+    </script>
+    <style>
+      #redirect {
+        display: none;
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #111827, #581c87);
+        color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        font-family: system-ui, -apple-system, sans-serif;
+      }
+      .logo {
+        width: 120px;
+        height: 120px;
+        background: #9333EA;
+        border-radius: 24px;
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn {
+        background: #9333EA;
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: 600;
+        margin-top: 24px;
+        display: inline-block;
+      }
+      h1 { margin: 0 0 12px 0; font-size: 24px; }
+      p { margin: 0; opacity: 0.8; font-size: 16px; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-CL6No21l.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BebL7wRr.css">
+  </head>
+  <body>
+    <div id="redirect">
+      <div class="logo">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
+          <path d="M3 16c0 2 2 3 3 3s3-1 3-3-2-3-3-3-3 1-3 3Z"/>
+          <path d="M15 16c0 2 2 3 3 3s3-1 3-3-2-3-3-3-3 1-3 3Z"/>
+          <path d="M9 16c0 2 2 3 3 3s3-1 3-3-2-3-3-3-3 1-3 3Z"/>
+          <path d="M12 12V6"/>
+        </svg>
+      </div>
+      <h1>Feed the Alpaca</h1>
+      <p>Open this game in Telegram to play!</p>
+      <a href="https://t.me/FeedTheAlpacaBot?game=FeedTheAlpaca" class="btn">Open in Telegram</a>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
